@@ -3,12 +3,12 @@ Link to Dashboard : https://app.powerbi.com/reportEmbed?reportId=0ce5f813-bcef-4
 
 
 ## Table of Contents
--	[Project Overview](#project-overview)
+- [Project Overview](#project-overview)
 - [Tools Used](#tools-used)
-- [Data_Source & Tables](#data-source-and-tables)
+- [Data Source & Tables](#data-source-and-tables)
 - [Data Cleaning & Preparation](#data-cleaning-and-preparation)
-- [Exploratory Analysis](#exploratory-analysis)
-- [Interesting codes](#interesting-codes)
+- [Exploratory Analysis & Findings](#exploratory-analysis-and-findings)
+- [Interesting Features](#interesting-features)
 - [Limitations](#limitations)
 
 ### Project Overview
@@ -26,9 +26,12 @@ The CFPB collects complaints from consumers across the United States regarding f
 - Complaints List
 
 ## Data Cleaning and Preparation
-The following tasks were performed: Checked for duplicates, correct formatting. 
+The following tasks were performed: 
+1. Checked for duplicates
+2. Corrected formatting
+3. Combined similar categories under 'product, 'sub-product', 'issue', 'sub-issue'. 
 
-## Exploratory Analysis & Findings
+## Exploratory Analysis and Findings
 1. When do complaints rise or fall over time?
 -- There are more complaints in the first half of the year than in the next half. 
 -- Companies also receive more complaints on weekdays than weekends.
@@ -37,10 +40,11 @@ The following tasks were performed: Checked for duplicates, correct formatting.
 -- The South Region has the most number of complaints (37%), followed by the West Region (32%). But the state with the most number of complaints is CA in the West (21%) & FL in the South (10%). 
 
 3. Which products and sub-products drive the most complaints?
--- Product (all time): Banking (39.69%) ; Sub-product (all time): Checking Account (33.22%)
+-- Highest Product (all time): Banking (39.69%) ; Sub-product (all time): Checking Account (33.22%)
 
 4. Which issues and sub-issues are most common or most severe?
--- Issue (all time): Managing an Account (24.17%); Sub-issue (all time): Deposit & Withdrawals (8.95%)
+-- Highest Complaint count - Issue (all time): Managing an Account (24.17%); Sub-issue (all time): Deposit & Withdrawals (8.95%)
+-- Lowest Timely Response rate - Issue (all time): Overdraft, savings or reward features (under Money Services) (50%)
 
 5. How fast, and how timely are company responses to complaints?
 -- Each company has an average timely response rate of 93.77%
@@ -53,10 +57,7 @@ The following tasks were performed: Checked for duplicates, correct formatting.
 -- Companies with No Enforcement History score have higher (diff 0.54%) reputation scores than those with enforcement history.
 
 8. Do submission channels differ in response speed or outcomes?
--- Yes. Complaints received via email and fax have the highest timely response rate (100%, 99.57%). The days between submitted and received is the lowest of all the submission channels (0.5 & 0.48)
-
-9. Others:
--- Rate of timely response is the lowest in 2023 (77.92% vs 95.62% in 2022). 50.66% in July, 18.13% in June. 
+-- Yes. Complaints received via email and fax have the highest timely response rate (100%, 99.57%). The days between submitted and received is the lowest of all the submission channels (0.5 days & 0.48 days)
 
 ## Interesting Features
 1. Created a button to display all filters. DAX formula below:
@@ -107,5 +108,9 @@ RETURN (
     )
 2. Added a 'Clear filters' & User guide button
 
+## Recommendations
+1. More resources can be dedicated to the issue: Overdraft, savings or reward features (under Money Services product).
+2. Shorten the submit-receive time for referral feedback channel (3 days, out of the total 15 days from submit to respond). This will improve the response time for 17.22% of complaints.
+
 ## Limitations
-Data updated until August 2023. Hence average is used when analyzing complaints and response trends. 
+Data updated until August 2023. Hence, alot of the complaints submitted at this time will not have been responded to yet. Likewise, average is used when analyzing complaints and response trends. 
